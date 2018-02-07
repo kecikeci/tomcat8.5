@@ -1,8 +1,6 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
 # 启动时运行的脚本
-
-import warnings
-warnings.filterwarnings('ignore')
-
 import os
 
 #启动ssh
