@@ -2,6 +2,7 @@
 # -*- coding: UTF-8 -*-
 # 启动时运行的脚本
 import os
+import commands
 
 
 #启动tomcat，并分配70%的内存给他
