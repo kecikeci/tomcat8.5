@@ -8,7 +8,7 @@ MAINTAINER https://4xx.me
 RUN yum install java-1.8.0-openjdk* -y
 
 # 安装tomcat8.5
-RUN wget --no-check-certificate https://mirrors.aliyun.com/apache/tomcat/tomcat-8/v8.5.27/bin/apache-tomcat-8.5.27.tar.gz -p /root
+RUN wget --no-check-certificate -O /root/apache-tomcat-8.5.27.tar.gz https://mirrors.aliyun.com/apache/tomcat/tomcat-8/v8.5.27/bin/apache-tomcat-8.5.27.tar.gz
 RUN tar xzf /root/apache-tomcat-8.5.27.tar.gz
 RUN mkdir /data
 RUN mv /root/apache-tomcat-8.5.27 /data
