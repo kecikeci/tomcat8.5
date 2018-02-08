@@ -8,4 +8,6 @@ os.system("/usr/sbin/sshd -D")
 #启动tomcat
 os.system("/data/apache-tomcat-8.5.27/bin/startup.sh")
 
+print("启动成功。。。")
+
 
