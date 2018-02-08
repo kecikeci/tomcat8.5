@@ -106,7 +106,6 @@
 #                   signals. Default is "false" unless running on HP-UX in which
 #                   case the default is "true"
 # -----------------------------------------------------------------------------
-JAVA_OPTS='-Djava.security.egd=file:/dev/./urandom -server -Xms128m -Xmx512m -Dfile.encoding=UTF-8'
 # OS specific support.  $var _must_ be set to either true or false.
 cygwin=false
 darwin=false
