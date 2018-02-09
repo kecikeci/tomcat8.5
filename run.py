@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 # 启动时运行的脚本
-import os
 import commands
+import subprocess
 
 
 #启动tomcat，并分配70%的内存给他
@@ -14,11 +14,11 @@ if(shell_r[1]):
     if(os_m>=512):
         tomcat_m = int(os_m*0.7)
 print("分配给JVM的内存：%sM" % (tomcat_m))
-os.system('export JAVA_OPTS="-Djava.security.egd=file:/dev/./urandom -server -Xms128m -Xmx%sm -Dfile.encoding=UTF-8"' % (tomcat_m))
-os.system("/data/tomcat-8.5.27/bin/startup.sh")
+subprocess.call('export JAVA_OPTS="-Djava.security.egd=file:/dev/./urandom -server -Xms64m -Xmx'+str(tomcat_m)+'m -Dfile.encoding=UTF-8"', shell=True)
+subprocess.call("/data/tomcat-8.5.27/bin/startup.sh", shell=True)
 
 #启动ssh
-os.system("/usr/sbin/sshd -D")
+subprocess.call("/usr/sbin/sshd -D", shell=True)
 
 print("启动成功。。。")
 
