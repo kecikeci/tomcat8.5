@@ -18,4 +18,4 @@ EXPOSE 22
 
 COPY run.py /root/run.py
 RUN chmod -R 777 /root/run.py
-CMD ["/root/run.py"]
+ENTRYPOINT ["/root/run.py"]
