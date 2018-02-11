@@ -13,6 +13,10 @@ RUN mkdir /data
 COPY tomcat-8.5.27 /data/tomcat-8.5.27
 RUN chmod -R 777 /data/tomcat-8.5.27/bin/*
 
+# 清除yum缓存
+RUN yum clean all
+RUN rm -rf /var/cache/yum/*
+
 EXPOSE 8080
 EXPOSE 22
 
