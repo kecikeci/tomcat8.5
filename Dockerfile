@@ -16,6 +16,7 @@ RUN chmod -R 777 /data/tomcat-8.5.27/bin/*
 EXPOSE 8080
 EXPOSE 22
 
-COPY run.py /root/run.py
-RUN chmod -R 777 /root/run.py
-ENTRYPOINT ["/root/run.py"]
+COPY run.sh /root/run.sh
+RUN chmod -R 777 /root/run.sh
+
+ENTRYPOINT /root/run.sh && /usr/sbin/sshd -D
